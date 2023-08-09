@@ -9,7 +9,5 @@ namespace FichaCadastroApi.Model
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
-
-
     }
 }
