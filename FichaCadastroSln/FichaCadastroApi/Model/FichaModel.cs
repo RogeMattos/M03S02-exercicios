@@ -25,6 +25,9 @@ namespace FichaCadastroApi.Model
         [Required]
         public DateTime DataCadastro { get; set; }
 
+        public virtual IList<DetalheModel>? Detalhes { get; set;}
+
+
        
 
     }
