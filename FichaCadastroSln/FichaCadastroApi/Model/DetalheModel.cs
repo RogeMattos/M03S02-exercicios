@@ -2,6 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.Reflection.Metadata.Ecma335;
 using FichaCadastroApi.Base;
+using FichaCadastroApi.Enumerators;
 
 namespace FichaCadastroApi.Model
 {
@@ -14,7 +15,7 @@ namespace FichaCadastroApi.Model
         public string? Feeedback { get; set; }
 
         [Required]
-        public int Nota { get; set; }
+        public NotaEnum Nota { get; set; }
 
         [Required]
         public bool Ativado { get; set; }
