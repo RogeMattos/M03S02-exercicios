@@ -1,17 +1,16 @@
 ﻿using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
+using FichaCadastroApi.Base;
 
 namespace FichaCadastroApi.Model
 
 {
     [Table("Ficha")]
-    public class FichaModel
+    public class FichaModel : RelacionalBase
 
     {
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int Id { get; set; }
+       
     
         [Column(TypeName = "VARCHAR"), Required, StringLength(250)]
         public string Nome { get; set; }
@@ -21,9 +20,6 @@ namespace FichaCadastroApi.Model
 
         [Required]
         public DateTime DataNascimento { get; set; }
-
-        [Required]
-        public DateTime DataCadastro { get; set; }
 
         public virtual IList<DetalheModel>? Detalhes { get; set;}
 
