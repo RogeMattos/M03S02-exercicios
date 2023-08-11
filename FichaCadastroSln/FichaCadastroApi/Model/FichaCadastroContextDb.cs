@@ -8,6 +8,9 @@ namespace FichaCadastroApi.Model
         {
         }
 
+        public DbSet<FichaModel> FichaModels { get; set; }
+        public DbSet<DetalheModel> DetalheModels { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
 
