@@ -11,8 +11,8 @@ namespace FichaCadastroApi.AutoMapper
             CreateMap<FichaModel, FichaReadDTO>()
                  .ForMember(dest => dest.FichaComDetalhes, opt => opt.MapFrom(src => src.Detalhes));
 
-            CreateMap<FichaCreateDTO, FichaModel>()
-                .ForMember(dest => dest.Nome, opt => opt.MapFrom(src => src.NomeCompleto))
+             CreateMap<FichaCreateDTO, FichaModel>()
+               .ForMember(dest => dest.Nome, opt => opt.MapFrom(src => src.NomeCompleto))
                 .ForMember(dest => dest.Email, opt => opt.MapFrom(src => src.EmailInformado.ToLower()))
                 .ForMember(dest => dest.DataNascimento, opt => opt.MapFrom(src => src.DataDeNascimento));
 
