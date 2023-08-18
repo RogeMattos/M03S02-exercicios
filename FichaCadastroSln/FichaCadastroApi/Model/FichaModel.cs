@@ -23,7 +23,9 @@ namespace FichaCadastroApi.Model
 
         public virtual IList<DetalheModel>? Detalhes { get; set;}
 
-        public virtual IList<TelefoneModel>? telefones { get; set; }
+        public virtual IList<TelefoneModel>? Telefones { get; set; }
+
+
 
 
 

@@ -24,7 +24,7 @@ namespace FichaCadastroApi.Model
 
             modelBuilder.Entity<TelefoneModel>()
                 .HasOne(e => e.Ficha)
-                .WithMany(x => x.telefones)
+                .WithMany(x => x.Telefones)
                 .Metadata
                 .DeleteBehavior = DeleteBehavior.Restrict;
 
