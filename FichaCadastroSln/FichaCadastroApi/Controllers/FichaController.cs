@@ -3,13 +3,14 @@ using FichaCadastroApi.DTO.Ficha;
 using FichaCadastroApi.Model;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
-
+using System.Linq;
+using Microsoft.IdentityModel.Tokens;
+using Microsoft.EntityFrameworkCore;
 
 namespace FichaCadastroApi.Controllers
 {
-
     [ApiController]
-    [Route("api/[controller)")]
+    [Route("api/[controller]")]
     public class FichaController : ControllerBase
     {
         private readonly ILogger<FichaController> _logger;
@@ -52,6 +53,6 @@ namespace FichaCadastroApi.Controllers
             }
 
         }
-
     }
+
 }
