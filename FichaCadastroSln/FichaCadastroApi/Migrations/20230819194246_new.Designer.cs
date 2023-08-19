@@ -4,6 +4,7 @@ using FichaCadastroApi.Model;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FichaCadastroApi.Migrations
 {
     [DbContext(typeof(FichaCadastroDbContext))]
-    partial class FichaCadastroDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230819194246_new")]
+    partial class @new
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -51,7 +54,7 @@ namespace FichaCadastroApi.Migrations
 
                     b.HasIndex("FichaId");
 
-                    b.ToTable("Detalhe", (string)null);
+                    b.ToTable("Detalhe");
                 });
 
             modelBuilder.Entity("FichaCadastroApi.Model.FichaModel", b =>
@@ -80,7 +83,7 @@ namespace FichaCadastroApi.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Ficha", (string)null);
+                    b.ToTable("Ficha");
                 });
 
             modelBuilder.Entity("FichaCadastroApi.Model.TelefoneModel", b =>
@@ -110,7 +113,7 @@ namespace FichaCadastroApi.Migrations
 
                     b.HasIndex("FichaId");
 
-                    b.ToTable("Telefone", (string)null);
+                    b.ToTable("Telefone");
                 });
 
             modelBuilder.Entity("FichaCadastroApi.Model.DetalheModel", b =>

@@ -26,7 +26,7 @@ namespace FichaCadastroApi.Model
         public bool Ativo { get; set; }
 
         [Required]
-        public virtual FichaModel Ficha { get; set; }
+        public virtual FichaModel? Ficha { get; set; }
 
 
     }
