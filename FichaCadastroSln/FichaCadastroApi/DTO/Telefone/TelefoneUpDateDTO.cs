@@ -1,10 +1,12 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace FichaCadastroApi.DTO.Telefone
 {
     public class TelefoneUpDateDTO
     {
         //[M3S02] Ex 02 - Crie uma Dto chamada Telefone
+        //[M3S02] Ex 05 - Criar a validação na DTO Telefone
         [Required(ErrorMessage = "Campo Obrigatório")]
         [MaxLength(3, ErrorMessage = "Este campo aceita até 3 caracteres")]
         [MinLength(3, ErrorMessage = "Este campo aceita no mínimo 3 caracteres")]
