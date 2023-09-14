@@ -20,7 +20,7 @@ namespace FichaCadastroApi.AutoMapper
             //Configuração da maper para a tabela telefone
             CreateMap<FichaModel, TelefoneModel>()
                 .ForMember(dest => dest.Ficha, opt => opt.MapFrom(src => src.Telefones));
-            
+
             CreateMap<TelefoneCreateDTO, TelefoneModel>()
               .ForMember(dest => dest.Ddd, opt => opt.MapFrom(src => src.Ddd))
                .ForMember(dest => dest.Numero, opt => opt.MapFrom(src => src.Numero))
@@ -28,7 +28,7 @@ namespace FichaCadastroApi.AutoMapper
 
             // [M3S02] Ex 02 - Configurar o Automapper para concatenar o DDD + Telefone
             CreateMap<TelefoneModel, TelefoneReadDTO>()
-            .ForMember(dest => dest.Contato, opt => opt.MapFrom(src => $"{src.Ddd} + {src.Numero}"));
+            .ForMember(dest => dest.Contato, opt => opt.MapFrom(src => $"{src.Ddd} {src.Numero}"));
 
             CreateMap<FichaUpDateDTO, FichaModel>();
 

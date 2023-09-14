@@ -16,6 +16,8 @@ builder.Services.AddDbContext<FichaCadastroDbContext>(options => options.UseSqlS
 
 builder.Services.AddAutoMapper(typeof(Program));
 
+builder.Services.AddCors();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -28,6 +30,13 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
+
+app.UseCors(cors =>
+{
+    cors.AllowAnyHeader();
+    cors.AllowAnyMethod();
+    cors.AllowAnyOrigin();
+});
 
 app.MapControllers();
 
